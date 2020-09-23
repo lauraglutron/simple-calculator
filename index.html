@@ -8,11 +8,15 @@
 <body>
     <h1>Simple calculator</h1>
    <script>
-       let firstValue = prompt('Please enter the first value "1"');
-       let operator = prompt('please enter now the operator "+"');
-       let secondValue = prompt('eventually enter the second value "2"');
+       let firstValue = +prompt('Please enter the first value');
+       let operator = prompt('enter now the operator');
+       let secondValue = +prompt('eventually enter the second value');
 
-       console.log(parseInt(firstValue) + parseInt(secondValue));
+       if (operator === "+") {
+	        console.log(firstValue + secondValue);
+        } else {
+	        console.log(firstValue - secondValue);
+        }
    </script>
 </body>
 </html>
