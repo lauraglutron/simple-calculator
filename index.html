@@ -8,30 +8,61 @@
 <body>
     <h1>Simple calculator</h1>
 
-   <section>
+    <section>
     <form>
-      <div>
-        <label for="number-1">Number 1</label>
-        <input type="number" name="number-1" id="number-1">
-      </div>
-      <div>
-        <label for="operand">Operand</label>
-        <select name="operand" id="operand">
-          <option value="add">+</option>
-          <option value="minus">-</option>
-          <option value="multiply">*</option>
-          <option value="divide">/</option>
-        </select>
-      </div>
-      <div>
-        <label for="number-2">Number 2</label>
-        <input type="number" name="number-2" id="number-2">
-      </div>
-      <div>
-          <button id="calculate"></button>
-      </div>
+        <div>
+            <label for="number-1">Number 1</label>
+            <input type="number" name="number-1" id="number-1">
+        </div>
+        <div>
+            <label for="operand">Operand</label>
+            <select name="operand" id="operand">
+            <option value="add">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+            </select>
+        </div>
+        <div>
+            <label for="number-2">Number 2</label>
+            <input type="number" name="number-2" id="number-2">
+        </div>
+        <div>
+            <button class= "" id="calculate">=</button>
+        </div>
     </form>
-  </section>
+    <h1 class= "" id="output"></h1>
+    </section>
+
+    <script>
+    const form = document.querySelector("#form");
+    const btn = document.querySelector("#calculate");
+    const firstButton = document.querySelector("#number-1");
+    const secondButton = document.querySelector("#number-2");
+    const operand = document.querySelector("#operand");
+    const output = document.querySelector("#output");
+    let = result;
+
+    btn.addEventListener("click", function (){
+        switch(operand.value){
+            case '+':
+                result = +firstValue + +secondValue;
+                break;
+            case '-':
+                result = +firstValue - +secondValue;
+                break;
+            case '*':
+                result = +firstValue * +secondValue;
+                break;
+            case '/':
+                result = +firstValue / +secondValue;
+                break;
+            default:
+                console.log('Invalid');
+        }
+    }
+
+  </script>
 
 </body>
 </html>
